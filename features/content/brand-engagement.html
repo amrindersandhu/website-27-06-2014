@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+   
+   <!-- Common part in the html/head section -->
+
+   <meta charset="utf-8">
+   <meta http-equiv="cleartype" content="on">
+   <meta name="robots" content="noindex">
+   <!-- http://t.co/dKP3o1e -->
+   <meta name="HandheldFriendly" content="True">
+   <meta name="MobileOptimized" content="320">
+   <meta name="viewport" content="initial-scale=1.0">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-title" content="Unmetric">
+   <meta name="msapplication-TileImage" content="">
+   <meta name="msapplication-TileColor" content="#4c5bb7">
+   	
+   <!-- JavaScript -->
+   
+   <script src='../../assets/js/google-analytics.js'></script>
+<script src='../../assets/js/vendor/modernizr-2.6.2.min.js'></script>
+   
+   <!-- For all browsers -->
+   
+   <link rel='stylesheet' href='../../assets/css/style.css'>
+   <link href="../../assets/favicon.ico" rel="shortcut icon">
+   <link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon">
+   
+   <link href='http://fonts.googleapis.com/css?family=Exo+2:200' rel='stylesheet' type='text/css'>
+   
+   <!--[if (lt IE 9) & (!IEMobile)]>
+   
+      <script src='../../assets/js/vendor/selectivizr-min.js'></script>
+<script src='../../assets/js/vendor/respond.min.js'></script>
+
+   <![endif]-->  
+  
+  
+  
+  <title>Unmetric</title>
+  
+</head>
+  
+  
+
+<body class="features_pg">
+  <header class="header">
+     
+
+   <div class="un_logo-wrap">
+      <a class="un_logo" href="../../index.html"><span>unmetric</span></a>
+   </div>
+   <nav class="main_nav-wrap">
+      <ul class="main_nav">
+         <li><a class="signup_link" href="../../signup.html">Sign Up for a Free Trial</a></li>
+         <li><a class="login_link" href="#">Login</a></li>
+         <li><a class="menu_link" href="#">Menu</a></li>
+      </ul>
+   </nav>
+  </header>
+
+   <section class="section stage-sec">
+      <div class="content">
+         <div class="center-size1of1">
+   		   <h1>Channel</h1>
+   		   <h2>Brand Engagement</h2> 
+         </div>
+      </div>
+   </section>
+   
+   <section class="section">
+      <div class="content">
+         <div class="center-size10of12">
+            <p class="intro">Discover how consumers engage with your content activity. View trends on a microcontent level or over larger time periods to gauge your brand's engagement on social vs competitor efforts.</p>
+            <img src="../../assets/i/features/feature_window.png" alt="feature_window" />  
+         </div>
+      </div>
+   </section>
+
+   <hr class="sep"/>
+   
+   <section class="section all_features-wrap">
+      <div class="content">
+         <h2 class="t-center push_btm-8">All Features</h2> 
+   
+         <div class="size5of12">
+            <h3 class="push_btm-4">Channel</h3> 
+            <h4><a href="#">Brand Engagement</a></h4> 
+            <!-- <p>Discover how consumers engage with your content activity. View trends on a microcontent level or over larger time periods to gauge your brand's engagement on social vs competitor efforts.</p>  -->
+            
+            <h4><a href="#">Fan and Follower Growth</a></h4> 
+            <!-- <p>Track the growth of your social media audience. Unlock connections between new content or campaign efforts and Fans/Followers Growth Rates.</p>  -->
+   
+            <h4><a href="#">Competitor Benchmarks</a></h4> 
+            <!-- <p>Have a set of competitors in mind? Want to outperform the whole industry? Want to avoid surprises from the left field? Get the metrics and benchmarks to plan your social roadmap.</p>  -->
+   
+            <h4><a href="#">Audience and Influencers</a></h4> 
+            <!-- <p>Understand your social audience and compare them with your competitors. Track their influencers to uncover new ways to expand your reach and forge partnerships.</p> -->
+   
+            <h4><a href="#">Customer Service</a></h4> 
+            <!-- <p>Wonder how often your Twitter team should reply to customer tweets? Get the secrets to excellent customer service on social media with our dedicated Customer Service metrics.</p> -->
+   
+            <h4><a href="#">Data and Reports</a></h4> 
+            <!-- <p>Need more control over your social media data? Pick a download format of choice and our data is yours to crunch.</p> -->
+         </div>
+   
+         <div class="size4of12">
+            <h3 class="push_btm-4">Content</h3>
+   
+            <h4><a href="#">Content Strategy</a></h4> 
+            <!-- <p>See what kind of creative content resonates on Facebook, Twitter and Instagram. Use the data based on our unique science to direct efforts for your next Post, Tweet or even campaign.</p>  -->
+   
+            <h4><a href="#">Sentiment</a></h4>
+            <!-- <p>Tune in to consumer conversations on Posts and Tweets. View a breakdown of positive, negative and neutral vibes to understand how your social audience feel.</p> -->
+   
+            <h4><a href="#">Top Keywords</a></h4> 
+            <!-- <p>Discover topics and tags that drive your consumer conversations on Social Media. Use these insights to drive your customer response and creative.</p>  -->
+   
+            <h4><a href="#">Alerts</a></h4>
+            <!-- <p>Get to know when your competitors innovate right in your e-mail inbox. Use our alerts for daily or weekly insights, quantitative takeaways and creative inspiration to make your next weekly and monthly report stand out.</p>  -->
+         </div>
+         
+         <div class="size3of12">
+            <h3 class="push_btm-4">Campaign</h3>
+   
+            <h4><a href="#">Campaign Intelligence</a></h4> 
+            <!-- <p>Looking to answer how your campaign performed on Social Media? With Campaign Intelligence, you can identify competitor efforts across Facebook and Twitter and stack how your campaign engaged versus theirs.</p>  -->
+   
+            <h4><a href="#">Hashtag Analysis</a></h4>  
+            <!-- <p>Track the different brand conversations around happening trends and topics to stay on point with your Instagram and Twitter community.</p> -->
+         </div>
+      </div>
+   </section>
+      
+   <hr class="sep">
+   
+   <section class="section">
+      <div class="content">
+         <div class="cta-wrap">
+            <h4 class="">We’ve processed 100,000,000+ pieces of microcontent over 6 biggest social networks for 18,000+ brands from 30+ sectors, just for you.</h4>      
+            <a class="btn-pri" href="#">Sign up for a free trial</a>
+         </div>
+      </div>
+   </section>
+   
+   <hr class="sep">
+  
+      
+   <footer class="section footer">
+      <div class="content">
+         <div class="center-size8of12">
+            <div class="footer_links">
+               <a href="/">Home</a> &bull;
+               <a href="product.html">Product</a> &bull;
+               <a href="product.html">Company</a> &bull;
+               <a href="product.html">Contact</a> &bull;
+               <a href="product.html">Blog</a> &bull;
+               <a href="product.html">Sign Up</a>
+               <!--
+<a href="product.html">See how Unmetric can help you</a><br/>
+               <a href="company.html">Meet the team at Unmetric</a><br/>
+               <a href="contact.html">Get in touch with us</a><br/>
+               <a href="blog.html">Latest News</a>
+-->
+               <!--
+<a href="product.html#3cs">Learn about the advantages of Content, Campaign & Channel Intelligence.</a><br/>
+               <a href="company.html#exec">Meet the team at Unmetric.</a>
+-->
+            </div>
+         </div>
+         <div class="center-size5of12">
+            <div class="social_wrap">
+<!--                <p>You can find Unmetric across many of the social networks we cover on our platform:</p> -->
+               <ul class="social_list">
+                  <li><a class="social_link-fb" href="#">Facebook</a></li>
+                  <li><a class="social_link-tw" href="#">Twitter</a></li>
+                  <li><a class="social_link-pt" href="#">Pinterest</a></li>
+                  <li><a class="social_link-in" href="#">LinkedIn</a></li>
+                  <li><a class="social_link-ss" href="#">SlideShare</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+   
+   <div class="tw_cert-pg">
+      <a href="#">
+         <img src="../assets/i/twitter_certified_product_badge.png" alt="twitter-certified-product-badge"/>
+         <p>Unmetric is now a Twitter Certified Product.</p>
+      </a>
+   </div>
+   
+   <div class="overlay menu_overlay">
+   <ul class="menu_list">   
+      <li>
+         <a href="../../product.html"><span>See what you can achieve with Unmetric</span> Product</a>
+      </li>
+      <li><a href="../../company.html"><span>Meet the team at Unmetric</span> Company</a></li>
+      <li><a href="../../contact.html"><span>Get in touch with us</span> Contact</a></li>
+      <li><a href="http://blog.unmetric.com"><span>Tips, Insights, News</span> Blog</a></li>
+   </ul>
+   
+   <div class="social_wrap">
+      <span>We are social too</span>
+      <ul class="social_list">
+         <li><a class="social_link-fb" href="#">Facebook</a></li>
+         <li><a class="social_link-tw" href="#">Twitter</a></li>
+         <li><a class="social_link-pt" href="#">Pinterest</a></li>
+         <li><a class="social_link-in" href="#">LinkedIn</a></li>
+         <li><a class="social_link-ss" href="#">SlideShare</a></li>
+      </ul>
+   </div>
+   
+</div>
+   
+   <!-- All JS goes here-->
+   
+   <script src='../../assets/js/vendor/jquery-1.9.1.min.js'></script>
+<script src='../../assets/js/vendor/jquery.smooth-scroll.min.js'></script>
+<script src='../../assets/js/vendor/bjqs-1.3.min.js'></script>
+<script src='../../assets/js/checksession.js'></script>
+<script src='../../assets/js/main.js'></script>
+<script src='../../assets/js/vendor/jquery.sticky.js'></script>
+   
+   <script>
+      $(window).load(function(){
+         $("#c-nav").sticky({ topSpacing: 15 });
+      });
+      
+		$(document).ready(function() {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				var id = $(this).attr('href');
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 600);
+			});
+		});
+   </script>
+   
+</body>
+</html>

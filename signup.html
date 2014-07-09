@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+   
+   <!-- Common part in the html/head section -->
+
+   <meta charset="utf-8">
+   <meta http-equiv="cleartype" content="on">
+   <meta name="robots" content="noindex">
+   <!-- http://t.co/dKP3o1e -->
+   <meta name="HandheldFriendly" content="True">
+   <meta name="MobileOptimized" content="320">
+   <meta name="viewport" content="initial-scale=1.0">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-title" content="Unmetric">
+   <meta name="msapplication-TileImage" content="">
+   <meta name="msapplication-TileColor" content="#4c5bb7">
+   	
+   <!-- JavaScript -->
+   
+   <script src='assets/js/google-analytics.js'></script>
+<script src='assets/js/vendor/modernizr-2.6.2.min.js'></script>
+   
+   <!-- For all browsers -->
+   
+   <link rel='stylesheet' href='assets/css/style.css'>
+   <link href="assets/favicon.ico" rel="shortcut icon">
+   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+   
+   <!--[if (lt IE 9) & (!IEMobile)]>
+   
+      <script src='assets/js/vendor/selectivizr-min.js'></script>
+<script src='assets/js/vendor/respond.min.js'></script>
+
+   <![endif]-->  
+  
+  
+  
+  <title>Unmetric</title>
+  
+</head>
+  
+  
+
+<body class="signup_pg">
+  <header class="header">
+     
+
+   <div class="un_logo-wrap">
+      <a class="un_logo" href="index.html"><span>unmetric</span></a>
+   </div>
+   <nav class="main_nav-wrap">
+      <ul class="main_nav">
+         <li><a class="login_link" href="#">Login</a></li>
+         <li><a class="menu_link" href="#">Menu</a></li>
+      </ul>
+   </nav>
+  </header>
+   
+   <section class="section signup_form-wrap">
+      <div class="content">
+      	<h2 class="t-center">Try Unmetric Free for 6 Days</h2>
+      	<p class="center-size8of12 t-center push_btm-6">Find out how turning big data into smart data can help you plan better content.  <span class="break-line">Request a trial now and we’ll be in touch to get you started.</span></p>
+         <p class="alert alert-warning">Please fill in all the fields above.</p>
+         <form method="post" class="signup-form">
+
+            <div class="input-wrap">
+	            <input type="text" required="" name="name" class="input-name" tabindex="1" id="signup-name"/>
+	            <label alt="First and Last Name" placeholder="Your Name"></label>
+			  	</div>
+            <div class="input-wrap">
+					<input type="email" required="" name="email" class="input-email" tabindex="2" id="signup-email"/>
+					<label alt="Business Email" placeholder="Your Email"></label>
+				</div>
+				<div class="input-wrap">
+					<input type="text" required="" name="company-name" class="input-company" tabindex="3" id="signup-company" />
+					<label alt="Company Name" placeholder="Your Company"></label>
+				</div>
+				<div class="input-wrap">
+					<input type="tel" required="" name="contact-number" class="input-contact" tabindex="4" id="signup-contact" />
+               <label alt="Contact Number" placeholder="Your Contact No."></label>
+				</div>
+
+            <div class="input-wrap select-wrap">
+	        		<select tabindex="5" id="signup-sector">
+   	        		<option>Your Sector of Interest</option>
+   	        		<option>Automative</option>
+	        		</select>
+	        		<label alt="Sector of Interest" placeholder="Your sector of interest"></label>
+	        	</div>
+
+            <div class="input-wrap select-wrap is_hidden">
+               <select tabindex="6" id="sectors">   
+            	</select>
+            </div>
+
+            <div class="input-wrap select-wrap">
+               <select tabindex="7" id="signup-geo">
+                  <option>Your Geography</option>
+                  <option>North America</option>
+               </select>
+               <label alt="Your Geography" placeholder="Choose your Geography"></label>
+            </div>
+			  	
+			  	<div class="input-wrap">
+         		<button type="submit" class="btn btn-pri" tabindex="8">Sign Up </button>
+         	</div>
+      		
+         </form>
+         
+         
+      </div>
+   </section>
+   
+   <!-- All JS goes here-->
+   
+   <script src='assets/js/vendor/jquery-1.9.1.min.js'></script>
+<script src='assets/js/vendor/jquery.smooth-scroll.min.js'></script>
+<script src='assets/js/vendor/bjqs-1.3.min.js'></script>
+<script src='assets/js/checksession.js'></script>
+<script src='assets/js/main.js'></script>
+<script src='assets/js/vendor/jquery.sticky.js'></script>
+   
+   <script>
+      $(window).load(function(){
+         $("#c-nav").sticky({ topSpacing: 15 });
+      });
+      
+		$(document).ready(function() {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				var id = $(this).attr('href');
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 600);
+			});
+		});
+   </script>
+   
+</body>
+</html>
+   		
+   

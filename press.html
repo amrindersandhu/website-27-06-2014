@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+   
+   <!-- Common part in the html/head section -->
+
+   <meta charset="utf-8">
+   <meta http-equiv="cleartype" content="on">
+   <meta name="robots" content="noindex">
+   <!-- http://t.co/dKP3o1e -->
+   <meta name="HandheldFriendly" content="True">
+   <meta name="MobileOptimized" content="320">
+   <meta name="viewport" content="initial-scale=1.0">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-title" content="Unmetric">
+   <meta name="msapplication-TileImage" content="">
+   <meta name="msapplication-TileColor" content="#4c5bb7">
+   	
+   <!-- JavaScript -->
+   
+   <script src='assets/js/google-analytics.js'></script>
+<script src='assets/js/vendor/modernizr-2.6.2.min.js'></script>
+   
+   <!-- For all browsers -->
+   
+   <link rel='stylesheet' href='assets/css/style.css'>
+   <link href="assets/favicon.ico" rel="shortcut icon">
+   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+   
+   <link href='http://fonts.googleapis.com/css?family=Exo+2:200' rel='stylesheet' type='text/css'>
+   
+   <!--[if (lt IE 9) & (!IEMobile)]>
+   
+      <script src='assets/js/vendor/selectivizr-min.js'></script>
+<script src='assets/js/vendor/respond.min.js'></script>
+
+   <![endif]-->  
+  
+  
+  
+  <title>Unmetric</title>
+  
+</head>
+  
+  
+
+<body class="home_pg">
+  <header>
+     
+
+   <div class="un_logo-wrap">
+      <a class="un_logo" href="index.html"><span>unmetric</span></a>
+   </div>
+   <nav class="main_nav-wrap">
+      <ul class="main_nav">
+         <li><a class="signup_link" href="signup.html">Free Trial Sign Up</a></li>
+         <li><a class="login_link" href="#">Login</a></li>
+         <li><a class="menu_link" href="#">Menu</a></li>
+      </ul>
+   </nav>
+  </header>
+    
+   <div class="page_header press_header">
+      <div class="content">
+         <h1 class="page_title">We&rsquo;re in the News.<br/><span>We get our share of time in the limelight.</span>.</h1>   
+      </div>
+   </div>
+   
+   <div class="section press_wrap">
+		<div class="content">
+			<div class="media media-press">
+					<img src="i/media/fast_company.png" alt="Fast Company" class="news-media">
+					<a target="_blank" href="http://www.fastcompany.com/3020812/fast-feed/how-social-is-your-fitness-band"> 
+						<h3 class="media-title">How Social Is Your Fitness Brand</h3>
+						<time datetime="2013-10-21">Oct 31, 2013</time>
+					</a>
+	        	</div>
+			<div class="media media-press">
+					<img src="i/media/usa_today_new.png" alt="USA Today" class="news-media">
+					<a target="_blank" href="http://www.usatoday.com/story/travel/2013/10/20/rental-car-companies-social-media-rankings/3107287/"> 
+						<h3 class="media-title">Rental car companies court customers on social media</h3>
+						<time datetime="2013-10-21">Oct 21, 2013</time>
+					</a>
+	        	    </div>
+			<div class="media media-press">
+					<img src="i/media/pando_daily.png" alt="Pando Daily logo" class="news-media">
+					<a target="_blank" href="http://pandodaily.com/news/unmetric-raises-5-5m/"> 
+	        	    			<h3 class="media-title">Unmetric Raises $5.5M</h3>
+		   	    			<time datetime="2012-09-28">SEP 19, 2013</time>
+		   	    		</a>
+					<a target="_blank" href="http://pandodaily.com/2012/09/28/unmetric-report-details-social-media-winners-and-losers-among-top-brands/"> 
+	        	    			<h3 class="media-title">Unmetric Report details Social Media Winners and Losers among Top Brands</h3>
+		   	    			<time datetime="2012-09-28">SEP 28, 2012</time>
+		   	    		</a>
+        	    </div>
+			<div class="media media-press">
+					<img src="i/media/the_wall_street.png" alt="The Wall Street Journal" class="news-media">
+					<a target="_blank" href="http://blogs.wsj.com/accelerators/2013/03/15/lux-narayan-how-to-hack-b2b-marketing-using-social-media/"> 
+						<h3 class="media-title">Lux Narayan: How to Hack B2B Marketing using Social Media</h3>
+						<time datetime="2013-03-15">Mar 15, 2013</time>
+					</a>
+	        	</div>
+			<div class="media media-press">
+        	    	<img src="i/media/mashable.png" alt="Mashable logo" class="news-media">
+        	    	<a target="_blank" href="http://mashable.com/2013/05/08/pinterest-most-popular-brand-boards/"> 
+        	    		<h3 class="media-title">The Most Popular Branded Boards on Pinterest</h3>
+        	        	<time datetime="2012-09-28">MAY 08, 2013</time>
+        	        </a>
+        	        <a target="_blank" href="http://mashable.com/2013/03/04/brands-harlem-shake-youtube-facebook-roi/"> 
+		   		   <h3 class="media-title">How Brands&rsquo; &ldquo;Harlem Shake&rdquo; Memes Fared on YouTube and Facebook</h3>
+        	        	<time datetime="2012-09-28">MAR 04, 2013</time>
+        	        </a>
+        	        <a target="_blank" href="http://mashable.com/2012/12/04/dallas-cowboys-nfl-social-infographic/"> 
+        	        	<h3 class="media-title">The Dallas Cowboys are NFL Champs &ndash; on Facebook</h3>
+        	        	<time datetime="2012-09-28">DEC 04, 2012</time>
+        	        </a>
+        	        <a target="_blank" href="http://mashable.com/2012/12/03/gangnam-style-marketing-infographic/"> 
+        	        	<h3 class="media-title">Hey, Sexy Marketing! Big Brands Go &ldquo;Gangnam Style&rdquo;</h3>
+        	        	<time datetime="2012-09-28">Dec 03, 2012</time>
+        	        </a>
+        	        <a target="_blank" href="http://mashable.com/2012/08/16/olympic-sponsors-go-for-gold-online-infographic/"> 
+        	        	<h3 class="media-title">Olympic Sponsors go for Gold Online [INFOGRAPHIC]</h3>
+        	        	<time datetime="2012-09-28">AUG 16, 2012</time>
+        	        </a>
+        	        <a target="_blank" href="http://mashable.com/2012/07/14/fast-food-social-media/"> 
+        	        	<h3 class="media-title">Fast Food Loves Facebook: Restaurant Chains on Social Media [INFOGRAPHIC]</h3>
+        	        	<time datetime="2012-09-28">JUL 14, 2012</time>
+        	        </a>
+                    <a target="_blank" href="http://mashable.com/2012/04/10/unmetric/">
+        	        	<h3 class="media-title">Unmetric Helps Businesses Keep a Social Eye on the Competition</h3>
+        	        	<time datetime="2012-09-28">APR 10, 2012</time>
+        	        </a>  
+			    </div>
+			<div class="media media-press">
+	        	    	<img src="i/media/tnw.png" alt="The Next Web logo" class="news-media">
+	        	    	<a target="_blank" href="http://thenextweb.com/insider/2012/09/27/unmetric-launches-social-media-benchmarking-brands-pinterest/"> 
+	        	    		<h3 class="media-title">Unmetric launches Social Media Benchmarking for Brands on Pinterest</h3>
+	        	        	<time datetime="2012-09-28">SEP 07, 2012</time>
+	        	        </a>
+	        	        <a target="_blank" href="http://thenextweb.com/insider/2012/07/16/burger-wars-mcdonalds-is-eating-burger-kings-lunch/"> 
+	        	        	<h3 class="media-title">&ldquo;Burger Wars&rdquo;, McDonald&lsquo;s is eating Burger King&lsquo;s lunch</h3>
+	        	        	<time datetime="2012-09-28">JUl 16, 2012</time>
+	        	        </a>
+	        	        <a target="_blank" href="http://thenextweb.com/2012/04/12/klout-for-brands-unmetric-now-lets-you-keep-an-eye-on-the-competition/"> 
+	        	        	<h3 class="media-title">&lsquo;Klout for brands&rsquo; Unmetric now lets you keep an eye on the competition </h3>
+	        	        	<time datetime="2012-09-28">APR 12, 2012</time>
+	        	        </a>
+				</div>
+			<div class="media media-press">
+        	    	<img src="i/media/wired.png" alt="Wired logo" class="news-media">
+        	    	<a target="_blank" href="http://insights.wired.com/profiles/blogs/7-ways-nike-fitbit-basis-bodymedia-and-jawbone-leverage-social"> 
+		   	    		<h3 class="media-title">Wearable Fitness Adoption Battle: How to Leverage Social Media Successfully</h3>
+		   	    		<time datetime="2013-11-20">NOV 20, 2013</time>
+		   	    	</a>
+					<a target="_blank" href="http://insights.wired.com/profiles/blogs/7-things-every-brand-can-learn-from-chobani-s-recall-crisis-on"> 
+						<h3 class="media-title">7 Things Every Brand Can Learn from Chobani’s Recall Crisis on Social Media</h3>
+						<time datetime="2013-09-13">SEP 13, 2013</time>
+					</a>
+				</div>
+			<div class="media media-press">
+	        	    		<img src="i/media/tech_crunch.png" alt="Tech Crunch logo" class="news-media">
+	        	    		<a target="_blank" href="http://techcrunch.com/2013/09/19/unmetric-series-b/"> 
+			   	    		<h3 class="media-title">Unmetric Raises $5.5M to Help Companies Measure the Competition on Social Media</h3>
+			   	    		<time datetime="2012-09-28">SEP 19, 2013</time>
+			   	    	</a>
+					<a target="_blank" href="http://techcrunch.com/2012/11/07/unmetric-satisfactionmetrics/"> 
+						<h3 class="media-title">Unmetric Launches Satisfaction Metrics to Track How Companies Tweet at Customers</h3>
+						<time datetime="2012-09-28">NOV 7, 2012</time>
+					</a>
+					<a target="_blank" href="http://techcrunch.com/2012/06/29/unmetric-youtube/"> 
+						<h3 class="media-title">Unmetric Scores the Virality of Brands&lsquo; YouTube Campaigns</h3>
+						<time datetime="2012-09-28">JUN 29, 2012</time>
+					</a>
+				</div>
+			<div class="media media-press">
+					<img src="i/media/forbes.png" alt="Forbes logo" class="news-media">
+					<a target="_blank" href="http://www.forbes.com/sites/erikamorphy/2012/10/30/luxury-brands-on-social-media-all-they-have-to-do-is-show-up/"> 
+						<h3 class="media-title">Luxury Brands on Social Media: All They Have to Do is Show Up</h3>
+						<time datetime="2012-10-30">Oct 30, 2012</time>
+					</a>
+					<a target="_blank" href="http://www.forbes.com/sites/ciocentral/2012/08/28/3-reasons-why-theres-no-measuring-roi-on-social-media/"> 
+						<h3 class="media-title">3 Reasons why there&rsquo;s No Measuring ROI On Social Media</h3>
+						<time datetime="2012-08-28">Aug 28, 2012</time>
+					</a>
+				</div>
+			<div class="media media-press">
+	        	    		<img src="i/media/adweek.png" alt="Adweek logo" class="news-media">
+		   	    		<a target="_blank" href="http://www.adweek.com/news/advertising-branding/lakers-beat-heatin-social-media-141109">        	    	
+	        	    			<h3 class="media-title">Lakers Beat Heat... in Social Media</h3>	        	
+						<time datetime="2012-09-28">JUN 13, 2012</time>
+					</a>
+				</div>
+			<div class="media media-press">
+					<img src="i/media/reuters.png" alt="Reuters logo" class="news-media">
+					<a target="_blank" href="http://www.reuters.com/article/2013/09/19/us-unmetric-funding-idUSBRE98I0VX20130919"> 
+						<h3 class="media-title">Unmetric Raises $5.5 Million as Social Media Industry Gains Steam</h3>
+						<time datetime="2012-09-28">SEP 19, 2013</time>
+					</a>
+					<a target="_blank" href="http://blogs.reuters.com/mediafile/2012/04/11/unmetric-gets-funding-to-help-brands-gauge-their-social-media-clout/"> 
+	        	    			<h3 class="media-title">Unmetric gets Funding to help Brands Gauge their Social Media Clout</h3>
+		   	    			<time datetime="2012-09-28">APR 11, 2012</time>
+		   	    		</a>
+				</div>
+			<div class="media media-press">
+	        	    	<img src="i/media/social_media_today.png" alt="Social Media Today logo" class="news-media">
+	        	    	<a target="_blank" href="http://socialmediatoday.com/peter-claridge/1208766/infographic-targeting-social-media"> 
+	        	    		<h3 class="media-title">How Insurance Companies are Targeting You on Social Media</h3>
+	        	        	<time datetime="2012-09-28">FEB 02, 2013</time>
+	        	        </a>
+	        	        <a target="_blank" href="http://socialmediatoday.com/peter-claridge/549540/who-wins-nba-social-media-finals"> 
+	        	        	<h3 class="media-title">Who Wins the NBA Social Media Finals?</h3>
+	        	        	<time datetime="2012-09-28">JUN 14, 2012</time>
+	        	        </a>
+					</div>
+			<div class="media media-press">
+	        	    	<img src="i/media/digital_trends.png" alt="The Digital Trends logo" class="news-media">
+	        	    	<a target="_blank" href="http://www.digitaltrends.com/social-media/with-class-in-session-automakers-finally-get-their-social-media-report-card/"> 
+	        	    		<h3 class="media-title">With Class in Session, Automakers Finally get their Social Media Report Card</h3>
+	        	        	<time datetime="2012-09-28">FEB 14, 2012</time>
+	        	        </a>
+					</div>
+			<div class="media media-press">
+	        	    		<img src="i/media/vb.png" alt="Venture Beats logo" class="news-media">
+		   	    		<a target="_blank" href="http://venturebeat.com/2013/09/19/unmetric-funding/"> 
+	        	    			<h3 class="media-title">Unmetric Blasts Your Company with Social Media Data, Gets $5.5M</h3>
+		   	    			<time datetime="2013-09-19">SEP 19, 2013</time>
+		   		   	</a>
+		   		</div>
+   		<div class="media media-press">
+	        	    		<img src="i/media/vator_news.png" alt="Vator News logo" class="news-media">
+		   	    		<a target="_blank" href="http://vator.tv/news/2013-09-19-unmetric-scores-55m-in-series-b-funding"> 
+	        	    			<h3 class="media-title">Social Media Benchmarking Company helps Brands Gain Insights into Effectiveness of Social Campaigns</h3>
+		   	    			<time datetime="2013-09-19">SEP 19, 2013</time>
+		   		   	</a>
+		   		</div>
+   		<div class="media media-press">
+	        	    		<img src="i/media/atd.png" alt="All Things Digital logo" class="news-media">
+		   	    		<a target="_blank" href="http://allthingsd.com/20130919/social-analytics-startup-unmetric-raises-5-5-million/"> 
+	        	    			<h3 class="media-title">Social Analytics Startup Unmetric Raises $5.5 Million</h3>
+		   	    			<time datetime="2013-09-19">SEP 19, 2013</time>
+		   		   	</a>
+		   		</div>
+   		<div class="media media-press">
+	        	    		<img src="i/media/media_post.png" alt="Media Post logo" class="news-media">
+		   	    		<a target="_blank" href="http://www.mediapost.com/publications/article/209501/unmetric-secures-55-million-in-funding-enhances.html"> 
+	        	    			<h3 class="media-title">Unmetric Secures $5.5 Million in Funding, Enhances Brand Social Influence Metrics</h3>
+		   	    			<time datetime="2013-09-19">SEP 19, 2013</time>
+		   		   	</a>
+		   		</div>
+      </div>
+   </div>
+			
+			<section class="media-list-wrap more-press">
+            	<h3>And some more&hellip;</h3>
+        		<ul class="media-list more-press-list group">
+        			<li><a target="_blank" href="http://smallbiztrends.com/2012/10/unmetric-benchmarking-tool-for-pinterest.html"><img alt="" src="i/media/small_business_trends.png"></a></li>
+        			<li><a target="_blank" href="http://news.yahoo.com/nba-teams-social-media-la-lakers-champs-memphis-030028630.html"><img alt="" src="i/media/yahoo_news.png"></a></li>
+        			<li><a target="_blank" href="http://www.mediabistro.com/alltwitter/social-fast-food_b25438"><img alt="" src="i/media/all_twitter.png"></a></li>
+        			<li><a target="_blank" href="http://finance.fortune.cnn.com/2012/04/16/venture-capital-deals-112/"><img alt="" src="i/media/cnn_money.png"></a></li>
+        			<li><a target="_blank" href="http://blogs.wsj.com/venturecapital/2012/04/16/the-daily-start-up-straighterline-books-10m-for-cheaper-online-ed/?mod=google_news_blog"><img alt="" src="i/media/wsj.png"></a></li>
+        			<li><a target="_blank" href="http://www.brandchannel.com/home/post/2012/07/18/McDonalds-Social-Media-Engagement-071812.aspx"><img alt="" src="i/media/brand_channel.png"></a></li>
+        			<li><a target="_blank" href="http://www.tnooz.com/2012/04/11/news/delta-wins-out-in-twitter-response-times-analysis/"><img alt="" src="i/media/tnooz.png"></a></li>
+        			<li><a target="_blank" href="http://www.examiner.com/web-2-0-in-san-francisco/an-unreview-with-a-company-who-has-a-brand-footfprint-review"><img alt="" src="i/media/examiner.png"></a></li>
+        			<li><a target="_blank" href="http://2012.pivotcon.com/how-oreo-took-a-controversial-stand-and-achieved-an-epic-social-media-win-case-study/"><img alt="" src="i/media/pivot.png"></a></li>
+        			<li><a target="_blank" href="http://allthings.womma.org/2012/08/28/add-some-risque-to-your-facebook-content-strategy/"><img alt="" src="i/media/womma.png"></a></li>
+        			<li><a target="_blank" href="http://www.finsmes.com/2012/04/unmetric-raises-3-2m-series-financing.html"><img alt="" src="i/media/finsmes.png"></a></li>
+        			<li><a target="_blank" href="http://www.mediabistro.com/fishbowlla/la-lakers-are-champs-of-the-social-media-world_b64539"><img src="i/media/media_bistro.png" alt="" border="0"></a></li>
+        			<li><a target="_blank" href="http://finance.fortune.cnn.com/2012/04/16/venture-capital-deals-112/"><img alt="" src="i/media/basketballfuzz.png"></a></li>
+        			<li><a target="_blank" href="http://visual.ly/nbas-top-5s-social-media"><img alt="" src="i/media/visual_ly.png"></a></li>
+        			<li><a target="_blank" href="http://www.research-live.com/news/financial/social-media-benchmarker-gets-$3m-funding/4007244.article"><img alt="" src="i/media/research.png"></a></li>
+        			<li><a target="_blank" href="http://www.business2community.com/social-media/luxury-brands-on-social-media-and-why-celebrity-endorsements-dont-work-infographic-0323209"><img alt="" src="i/media/business_community.png"></a></li>
+        			<li><a target="_blank" href="http://allfacebook.com/fast-food-unmetric_b94595"><img alt="" src="i/media/all_facebook.png"></a></li>
+        			<li><a target="_blank" href="http://www.businessinsider.com/how-hmvs-twitter-stream-went-rogue-2013-2"><img alt="" src="i/media/business_insider.png"></a></li>
+        			<li><a target="_blank" href="http://blogs.canada.com/2012/06/13/nbas-social-media-winners/"><img alt="" src="i/media/canada.png"></a></li>
+        			<li><a target="_blank" href="http://www.examiner.com/review/an-unreview-with-a-company-who-has-a-brand-footprint"><img alt="" src="i/media/examiner.png"></a></li>
+        			<li><a target="_blank" href="http://socialtimes.com/weigh-success-viral-video-campaigns-against-competitors_b100170"><img alt="" src="i/media/social_times.png"></a></li>
+        			<li><a target="_blank" href="http://www.clickz.com/clickz/news/2232328/unmetric-lets-agencies-identify-social-media-gaps"><img alt="" src="i/media/clickz.png"></a></li>
+        			<li><a target="_blank" href="http://espn.go.com/blog/playbook/trending/post/_/id/3406/social-media-lamarr-woodley-jared-allen"><img alt="" src="i/media/espn.png"></a></li>
+        			<li><a target="_blank" href="http://www.mediabistro.com/alltwitter/social-fast-food_b25438"><img alt="" src="i/media/media_bistro.png"></a></li>
+        			<li><a target="_blank" href="http://www.bizreport.com/2012/04/social-platform-measures-brands-competitors.html"><img alt="" src="i/media/biz_report.png"></a></li>
+        			<li><a target="_blank" href="http://www.examiner.com/article/new-module-enables-brands-to-measure-competitive-landscapehttp://www.examiner.com/article/new-module-enables-brands-to-measure-competitive-landscape"><img alt="" src="i/media/examiner.png"></a></li>
+        			<li><a target="_blank" href="http://www.mediabistro.com/alltwitter/olympics-social-sponsors_b26972"><img alt="" src="i/media/media_bistro_new.png"></a></li>
+        			<li><a target="_blank" href="http://allthings.womma.org/2012/07/27/ups-shows-big-brands-how-to-go-viral-on-facebook/"><img alt="" src="i/media/womma.png"></a></li>
+        			<li><a target="_blank" href="http://www.examiner.com/article/who-is-more-social-is-it-mcdonalds-burger-king-or-are-you-or-out"><img alt="" src="i/media/examiner.png"></a></li>
+        			<li><a target="_blank" href="http://travel.usatoday.com/flights/post/2012/04/delta-air-lines-tweets-the-most/673913/1"><img alt="" src="i/media/usa_today.png"></a></li>
+        			<li><a target="_blank" href="http://smallbusiness.yahoo.com/advisor/insurance-industry-social-media-engagement-strategy-performances-ranked-025543091.html"><img alt="" src="i/media/yahoo_business.png"></a></li>
+        			<li><a target="_blank" href="http://econsultancy.com/us/blog/10117-this-week-s-top-six-infographics-9"><img alt="" src="i/media/econsult.png"></a></li>        			
+        			<li><a target="_blank" href="http://www.pehub.com/145404/unmetric-secures-series-a-led-by-nexus/"><img alt="" src="i/media/pehub.png"></a></li>
+        	    </ul>
+            </section> 
+         <section class="media-list-wrap world-press">
+            	<h3>Around the world</h3>
+            	<ul class="media-list world-press-list">
+            		<li><a target="_blank" href="http://articles.economictimes.indiatimes.com/2013-09-20/news/42252699_1_unmetric-kumar-krishnasami-lakshmanan-narayan"><img src="i/media/et.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.nextbigwhat.com/unmetric-seriesb-funding-from-jafco-and-nexus-297/"><img src="i/media/nbw.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.iamwire.com/2013/09/social-analytics-startup-unmetric-secures-5-5-million-series-funding/"><img src="i/media/iamwire.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.dealcurry.com/20130920-Unmetric-Raises-Series-B-Round-Of-Funding.htm"><img src="i/media/dealcurry.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.pluggd.in/unmetric-funding-297/"><img src="i/media/plugged.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://techcircle.vccircle.com/500/unmetric-raises-3-2m-in-series-a-round-led-by-nexus-ventures/"><img src="i/media/tech_circle.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.medianama.com/2012/04/223-unmetric-raises-3-2-million-funding-from-nexus-venture-partners/"><img src="i/media/media_nama.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.siliconindia.com/news/startups/Lakshmanan-CoFounded-Unmetric-Nabs-32-Million-In-Series-A-Round-Of-Funding-nid-112064-cid-100.html"><img src="i/media/silicon_india.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://ventureintelligence.blogspot.in/2012/04/deal-alert-nexus-ventures-invests-3-m.html"><img src="i/media/venture.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://web2asia.blognhanh.com/2012/04/unmetric-raises-32-million-in-series.html"><img src="i/media/web_asia.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.indiasocial.in/unmetric-youtube-tool/"><img src="i/media/india_social.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://cms.blazedream.in/smartceo/2012/08/magazine/starting-up/analysing-your-social-influence/"><img src="i/media/smart_ceo.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.rediff.com/business/slide-show/slide-show-1-an-indian-product-for-fortune-500-cos/20120731.htm"><img src="i/media/rediff.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://business.outlookindia.com/article.aspx?281887"><img src="i/media/outlook.png" alt=""></a></li>
+            		<li><a target="_blank" href="http://www.socialsamosa.com/2012/08/featuring-a-social-media-tool-unmetric/"><img src="i/media/social_samosa.png" alt=""></a></li>
+            	</ul>
+            </section>
+      

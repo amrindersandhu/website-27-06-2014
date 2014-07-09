@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+   
+   <!-- Common part in the html/head section -->
+
+   <meta charset="utf-8">
+   <meta http-equiv="cleartype" content="on">
+   <meta name="robots" content="noindex">
+   <!-- http://t.co/dKP3o1e -->
+   <meta name="HandheldFriendly" content="True">
+   <meta name="MobileOptimized" content="320">
+   <meta name="viewport" content="initial-scale=1.0">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-title" content="Unmetric">
+   <meta name="msapplication-TileImage" content="">
+   <meta name="msapplication-TileColor" content="#4c5bb7">
+   	
+   <!-- JavaScript -->
+   
+   <script src='assets/js/google-analytics.js'></script>
+<script src='assets/js/vendor/modernizr-2.6.2.min.js'></script>
+   
+   <!-- For all browsers -->
+   
+   <link rel='stylesheet' href='assets/css/style.css'>
+   <link href="assets/favicon.ico" rel="shortcut icon">
+   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+   
+   <!--[if (lt IE 9) & (!IEMobile)]>
+   
+      <script src='assets/js/vendor/selectivizr-min.js'></script>
+<script src='assets/js/vendor/respond.min.js'></script>
+
+   <![endif]-->  
+  
+  
+  
+  <title>Unmetric</title>
+  
+</head>
+  
+  
+
+<body class="home_pg">
+  <header class="header">
+     
+
+   <div class="un_logo-wrap">
+      <a class="current un_logo" href="index.html"><span>unmetric</span></a>
+   </div>
+   <nav class="main_nav-wrap">
+      <ul class="main_nav">
+         <li><a class="signup_link" href="signup.html">Sign Up for a Free Trial</a></li>
+         <li><a class="login_link" href="#">Login</a></li>
+         <li><a class="menu_link" href="#">Menu</a></li>
+      </ul>
+   </nav>
+  </header>
+    
+   <div class="page_header home_header">
+      <div class="content">
+         <h1 class="page_title">Data-powered Insights for <span class="break-line">Human-powered brands.</span></h1>   
+         <h2 class="page_subtitle">Unmetric provides an unparalleled platform for data analytics  <span class="break-line">and benchmarking your brand’s content marketing efforts on</span> <span class="break-line">Facebook, Twitter, YouTube, Instagram, LinkedIn and Pinterest.</span></h2>
+      </div>
+      <span class="scroll">&darr;</span>
+   </div>
+    
+   <div class="statement_wrap statement_wrap-1 section">
+      <div class="content">
+         <p class="statement">High profile projects, limited time and a small margin for error – I need a social media analytics platform I can trust – and that’s trusted by others.</p>
+      </div>
+   </div>
+   
+   <section class="section">
+      <div class="content">
+         <div class="center-size8of12">
+               <h2>The Choice of Fortune 500 Brands <span class="break-line">and Award-Winning Agencies.</span></h2> 
+               <p class="intro">Our client’s have high expectations. We make sure to consistently deliver on our promise of best-in-class technology, ceaseless innovation and most importantly, all the support they need to ensure success.</p>
+            </div>
+         <div class="center-size10of12">
+            <div class="size6of12">
+               <p><strong>Agencies</strong> find value in Unmetric for a variety of situations, including new business pitches and new product launches. When being smarter than your client is essential, Unmetric keeps you ahead of the curve.</p>
+            </div>
+               <div class="size6of12">
+               <p><strong>Brands</strong> like <em>Toyota</em>, <em>American Airlines</em> and <em>Lowe’s</em> save time, money and other resources with Unmetric. Data collection time is reduced, allowing their people to focus on uncovering insights rather than crunching numbers.</p>
+            </div>
+         </div>
+         <div class="center-size11of12 push_btm-10">
+            <div class="agency_clients-wrap">
+               <ul class="bjqs clients_list agency_clients_list">
+                  <li class="clients_list-group">
+                     <div class="clients_list-group_list">
+                        <img src="assets/i/clients/mry.png" alt="Mry logo" />
+                        <img src="assets/i/clients/zocolo.png" alt="Zocolo logo" />
+                        <img src="assets/i/clients/bbdo.png" alt="BBDO logo" />
+                        <img src="assets/i/clients/groupm.png" alt="GroupM logo" />
+                        <img src="assets/i/clients/edelman.png" alt="Edelman logo" />
+                        <img src="assets/i/clients/ogilvy.png" alt="Social@Ogilvy logo" />
+                        <img src="assets/i/clients/deep_focus.png" alt="Deep Focus logo" />
+                        <img src="assets/i/clients/wieden.png" alt="Wieden + Kennedy logo" />
+                     </div>
+                     <div class="clients_list-group_list">
+                        <img src="assets/i/clients/toyota.png" alt="Toyoto logo" />
+                        <img src="assets/i/clients/axis_bank.png" alt="Axis Bank logo" />
+                        <img src="assets/i/clients/changi.png" alt="Changi Airport logo" />                        
+                        <img src="assets/i/clients/chevorlet.png" alt="Chevorlet logo" />
+                        <img src="assets/i/clients/fritolay.png" alt="FritoLay logo" />
+                        <img src="assets/i/clients/lowes.png" alt="Lowes logo" />
+                        <img src="assets/i/clients/suncorp.png" alt="Suncorp Insurance logo" />
+                        <img src="assets/i/clients/under_armour.png" alt="Under Armour logo" />
+                     </div>
+                  </li>
+
+                  <li class="clients_list-group">
+                     <div class="clients_list-group_list">
+                        <img src="assets/i/clients/tenthwave.png" alt="Tenthwave logo" />
+                        <img src="assets/i/clients/fusion.png" alt="Fusion Marketing logo" />
+                        <img src="assets/i/clients/mbooth.png" alt="MBooth logo" />
+                        <img src="assets/i/clients/lippe_taylor.png" alt="Lippe Taylor logo" />
+                        <img src="assets/i/clients/mashwork.png" alt="Mashwork logo" />
+                        <img src="assets/i/clients/mww.png" alt="MWW logo" />
+                        <img src="assets/i/clients/taylor.png" alt="Taylor Strategy logo" />
+                        <img src="assets/i/clients/digital_surgeons.png" alt="Digital Surgeons logo" />
+                     </div>
+                     <div class="clients_list-group_list">
+                        <img src="assets/i/clients/aircel.png" alt="Aircel logo" />
+                        <img src="assets/i/clients/ccd.png" alt="Cafe Coffe Day logo" />
+                        <img src="assets/i/clients/itc.png" alt="ITC Hotels logo" />
+                        <img src="assets/i/clients/madura.png" alt="Madura Fashions logo" />
+                        <img src="assets/i/clients/micromax.png" alt="Micromax logo" />
+                        <img src="assets/i/clients/nars.png" alt="Nars logo" />
+                        <img src="assets/i/clients/chevrolet.png" alt="Chevrolet logo" />
+                        <img src="assets/i/clients/mry.png" alt="Subway logo" />
+                     </div>
+                  </li>
+
+               </ul>
+            </div> 
+         </div>  
+         <div class="cta-wrap">
+            <h4>Our 100+ servers were hard at work crunching the numbers on <span class="break-line">12,483,981 pieces of content just this week!</span></h4>
+            <a class="btn-pri" href="#">Sign up for a free trial</a>
+         </div>
+      </div>
+   </section>
+    
+   <div class="statement_wrap statement_wrap-2 section">
+      <div class="content">
+         <p class="statement">I don’t just want Big Data, I want Actionable Data. The kind that will help me make decisions with confidence.</p>
+      </div>
+   </div>
+   
+   <section class="section">
+      <div class="content">
+         <div class="center-size8of12">
+            <h2>Plan, Execute and Measure Content Better with Unmetric.</h2>
+         </div>
+         <div class="benefit-1">
+             <h3>Social Media Metrics that Matter</h3>
+             <p>The Unmetric platform provides data with contextual relevance by offering customizable competitive intelligence and sector specific benchmarking. Equipped with our powerful combination of algorithms and human cognition, you’ll be ready to make decisions that impact not only social media activities, but business objectives.</p>
+          </div>
+         <div class="benefit-2"> 
+            <h3>Going Beyond the Algorithm</h3>
+            <p>Some things, like complicated pattern recognition, are better accomplished through human cognition. At Unmetric we have a team of analysts who review the data and are able to make connections, punching a hole through the walled gardens of Facebook and Twitter.</p>
+         </div>
+         <div class="benefit-3">
+            <h3>Customizable Solutions</h3>
+            <p>The Unmetric platform is highly customizable, allowing you to create your own competitive sets and even determine the importance of different engagement metrics.</p>
+         </div>
+         <div class="benefit-4">
+            <h3>Customer-focused Innovations</h3>
+            <p>This sort of focus on innovation and customizable solutions is part of our DNA.  We’ve got an army of developers working on a list of new features based on extensive customer feedback and in-depth knowledge of all the major social media platforms.</p>
+         </div>
+         
+         <div class="cta-wrap">
+            <h4 class="">We’ve processed more than 100,000,000 pieces of microcontent over the 6 biggest social networks for 20,000+ brands from 30+ sectors, just for you.</h4>      
+            <a class="btn-pri" href="#">Sign up for a free trial</a>
+         </div>
+         
+      </div>
+   </section>
+   <section class="section">
+      <div class="content inside_un w-pad">
+         <div class="center-size8of12 push_btm-2">
+            <h2>Inside “Un”metric</h2>
+         </div>
+         <div class="center-size1of12">
+            <h3>Understand. Uncover. Unlock.</h3>
+            <div class="center-size7of12">
+               <p>We pride ourselves on offering intelligence that explores deeper, more meaningful information that will help you understand the competitive landscape, uncover insights based on data and unlock new social strategies. That’s how we got the name, <strong>Unmetric</strong>.</p> 
+               <p>What are these unmetrics? If your focus is customer service, it could be Average Response Time (ART), potentially a key factor in reducing customer churn rates. Or perhaps you want to optimize your videos for views on YouTube. Exploring video length and viewer growth of your competitive set can help you save production and post-production costs as well as help set creative parameters.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+  
+         
+   <footer class="section footer">
+      <div class="content">
+         <div class="center-size8of12">
+            <div class="footer_links">
+               <a href="/">Home</a> &bull;
+               <a href="product.html">Product</a> &bull;
+               <a href="product.html">Company</a> &bull;
+               <a href="product.html">Contact</a> &bull;
+               <a href="product.html">Blog</a> &bull;
+               <a href="product.html">Sign Up</a>
+               <!--
+<a href="product.html">See how Unmetric can help you</a><br/>
+               <a href="company.html">Meet the team at Unmetric</a><br/>
+               <a href="contact.html">Get in touch with us</a><br/>
+               <a href="blog.html">Latest News</a>
+-->
+               <!--
+<a href="product.html#3cs">Learn about the advantages of Content, Campaign & Channel Intelligence.</a><br/>
+               <a href="company.html#exec">Meet the team at Unmetric.</a>
+-->
+            </div>
+         </div>
+         <div class="center-size5of12">
+            <div class="social_wrap">
+<!--                <p>You can find Unmetric across many of the social networks we cover on our platform:</p> -->
+               <ul class="social_list">
+                  <li><a class="social_link-fb" href="#">Facebook</a></li>
+                  <li><a class="social_link-tw" href="#">Twitter</a></li>
+                  <li><a class="social_link-pt" href="#">Pinterest</a></li>
+                  <li><a class="social_link-in" href="#">LinkedIn</a></li>
+                  <li><a class="social_link-ss" href="#">SlideShare</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+   
+   <div class="tw_cert-pg">
+      <a href="#">
+         <img src="../assets/i/twitter_certified_product_badge.png" alt="twitter-certified-product-badge"/>
+         <p>Unmetric is now a Twitter Certified Product.</p>
+      </a>
+      <p class="tw_cert-desc">The Twitter Certified Program badge and the Twitter Bird are trademarks of Twitter, Inc. or its affiliates.</p>
+   </div>
+   
+   <div class="overlay menu_overlay">
+   <ul class="menu_list">   
+      <li>
+         <a href="product.html"><span>See what you can achieve with Unmetric</span> Product</a>
+      </li>
+      <li><a href="company.html"><span>Meet the team at Unmetric</span> Company</a></li>
+      <li><a href="contact.html"><span>Get in touch with us</span> Contact</a></li>
+      <li><a href="http://blog.unmetric.com"><span>Tips, Insights, News</span> Blog</a></li>
+   </ul>
+   
+   <div class="social_wrap">
+      <span>We are social too</span>
+      <ul class="social_list">
+         <li><a class="social_link-fb" href="#">Facebook</a></li>
+         <li><a class="social_link-tw" href="#">Twitter</a></li>
+         <li><a class="social_link-pt" href="#">Pinterest</a></li>
+         <li><a class="social_link-in" href="#">LinkedIn</a></li>
+         <li><a class="social_link-ss" href="#">SlideShare</a></li>
+      </ul>
+   </div>
+   
+</div>
+   
+   <!-- All JS goes here-->
+   
+   <script src='assets/js/vendor/jquery-1.9.1.min.js'></script>
+<script src='assets/js/vendor/jquery.smooth-scroll.min.js'></script>
+<script src='assets/js/vendor/bjqs-1.3.min.js'></script>
+<script src='assets/js/checksession.js'></script>
+<script src='assets/js/main.js'></script>
+<script src='assets/js/vendor/jquery.sticky.js'></script>
+   
+   <script>
+      $(window).load(function(){
+         $("#c-nav").sticky({ topSpacing: 15 });
+      });
+      
+		$(document).ready(function() {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				var id = $(this).attr('href');
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 600);
+			});
+		});
+   </script>
+   
+</body>
+</html>

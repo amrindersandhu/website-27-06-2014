@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+   
+   <!-- Common part in the html/head section -->
+
+   <meta charset="utf-8">
+   <meta http-equiv="cleartype" content="on">
+   <meta name="robots" content="noindex">
+   <!-- http://t.co/dKP3o1e -->
+   <meta name="HandheldFriendly" content="True">
+   <meta name="MobileOptimized" content="320">
+   <meta name="viewport" content="initial-scale=1.0">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-title" content="Unmetric">
+   <meta name="msapplication-TileImage" content="">
+   <meta name="msapplication-TileColor" content="#4c5bb7">
+   	
+   <!-- JavaScript -->
+   
+   <script src='assets/js/google-analytics.js'></script>
+<script src='assets/js/vendor/modernizr-2.6.2.min.js'></script>
+   
+   <!-- For all browsers -->
+   
+   <link rel='stylesheet' href='assets/css/style.css'>
+   <link href="assets/favicon.ico" rel="shortcut icon">
+   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+   
+   <!--[if (lt IE 9) & (!IEMobile)]>
+   
+      <script src='assets/js/vendor/selectivizr-min.js'></script>
+<script src='assets/js/vendor/respond.min.js'></script>
+
+   <![endif]-->  
+  
+  
+  
+  <title>Unmetric</title>
+  
+</head>
+  
+  
+
+<body class="product_pg">
+  <header class="header">
+     
+
+   <div class="un_logo-wrap">
+      <a class="un_logo" href="index.html"><span>unmetric</span></a>
+   </div>
+   <nav class="main_nav-wrap">
+      <ul class="main_nav">
+         <li><a class="signup_link" href="signup.html">Sign Up for a Free Trial</a></li>
+         <li><a class="login_link" href="#">Login</a></li>
+         <li><a class="menu_link" href="#">Menu</a></li>
+      </ul>
+   </nav>
+  </header>
+    
+   <div class="page_header product_header">
+      <div class="content">
+         <h1 class="page_title">It’s more than a platform, <span class="break-line">it’s a launchpad.</span></h1>   
+      </div>
+      <span class="scroll">&darr;</span>
+   </div>
+
+   <section class="section stage-sec big_data-sec">
+      <div class="content">
+         <div class="center-size1of1">
+   		   <h2>Turning Big Data to Smart Data</h2>
+            <p class="intro">Like <a href="http://pllqt.it/DuNiiS" target="_blank">Netflix</a> and <a href="http://pllqt.it/xXtIzW" target="_blank">Pandora</a>, Unmetric understands that better results come from combining strong algorithms and smart people. The Unmetric platform draws from unique data science that utilizes:</p>  
+         </div>
+         <div class="size6of12">
+            <h3>Human Cognition</h3> 
+            <p>Manual categorization of creative content by a team of analysts lends a unique dimension to the content tagging module and permits category based analyses of engagement. This would be impossible with common NLP algorithms and commercially available computing power.</p>
+         </div>
+                
+         <div class="size6of12">
+            <h3>Sentinel Processes</h3> 
+            <p>A full-fledged content and user management application (developed in-house) runs in the background to facilitate data housekeeping, curation and updating on a daily basis. This app supports the ability to: manage brands, their profiles, parentage and interrelationships, categorize content through human efforts, create and manage user support.</p>
+         </div>
+      </div>
+   </section>
+   
+   <section class="section" id="3cs">
+      <div class="content">
+         <div class="t-center push_btm-8">
+            <h2>Contextually Relevant Competitive Intelligence</h2>
+         </div>
+         <div class="tabs_wrap" id="c-nav">
+               <ul class="tabs_list">
+                  <li><a class="nav-to-section-1 is_active" href="#channel-section">Channel</a></li>
+                  <li><a class="nav-to-section-2" href="#content-section">Content</a></li>
+                  <li><a class="nav-to-section-3" href="#campaign-section">Campaign</a></li>
+               </ul>
+            </div>
+         <section class="channel-sec" id="channel-section">
+            <div class="center-size10of12">
+               <h3>Channel</h3>
+               <p class="intro">Today’s brands need to have context for the activities around their social media personas - Facebook fan pages, Twitter handles, YouTube channels, etc. Unmetric’s channel intelligence provides this context by helping brands benchmark against a wide range of metrics within their sector or selected brands they compete with. The Unmetric platform indexes more than 50 metrics across six social media platforms for more than 20,000 brands.</p>
+            </div>            
+            <div class="feature_wrap feat-1">
+               <div class="feature_desc">
+                  <h4>Brand Engagement</h4> 
+                  <p>Discover how consumers engage with your content activity. View trends on a microcontent level or over larger time periods to gauge your brand’s engagement on social vs competitor efforts.</p>
+               </div>
+               <img src="assets/i/features/feat-brand_engag.png" alt="feature_window" />  
+            </div>
+            <div class="feature_wrap">   
+               <div class="feature_desc">
+                  <h4>Audience and Influencers</h4> 
+                  <p>Understand your social audience and compare them with your competitors. Track their influencers to uncover new ways to expand your reach and forge partnerships.</p>
+               </div>
+               <img src="assets/i/features/feat-audi_infl.png" alt="feature_window" />  
+            </div>
+            <div class="feature_wrap">   
+               <div class="feature_desc">
+                  <h4>Customer Service</h4> 
+                  <p>Wonder how often your Twitter team should reply to customer tweets? Get the secrets to excellent customer service on social media with our dedicated Customer Service metrics.</p>
+               </div>
+               <img src="assets/i/features/feat-cus_serv.png" alt="feature_window" />  
+            </div>
+         </section>
+         
+         <section class="content-sec" id="content-section">
+            <div class="center-size10of12">
+               <h3>Content</h3>
+               <p class="intro">Across 20,000 brands from more than 30 sectors, the Unmetric platform captures millions of pieces of micro-creative from Facebook posts to tweets to images and videos. More importantly, the performance of each of these micro-creatives is also indexed in terms of likes, comments, shares, views, retweets, re-pins or favorites. In effect, users can dig into this cornucopia of historical performance data to plan and execute content strategies with far more confidence - and with data to back their intuition.</p>
+            </div>
+            <div class="feature_wrap">   
+               <div class="feature_desc">
+                  <h4>Content Strategy</h4> 
+                  <p>See what kind of creative content resonates on Facebook, Twitter and Instagram. Use the data based on our unique science to direct efforts for your next Post, Tweet or even campaign.</p> 
+               </div>
+               <img src="assets/i/features/feat-cont_stra.png" alt="feature_window" />
+            </div>
+            <div class="feature_wrap">                  
+               <div class="feature_desc">
+                  <h4>Sentiment</h4>  
+                  <p>Tune in to consumer conversations on Posts and Tweets. View a breakdown of positive, negative and neutral vibes to understand how your social audience feel.</p>
+               </div>
+               <img src="assets/i/features/feat-sent_ana.png" alt="feature_window" />
+            </div>
+            <div class="feature_wrap">   
+               <div class="feature_desc">
+                  <h4>Alerts</h4> 
+                  <p>Get notified via e-mail when your competitors hit performance highs. Use our alerts for daily or weekly insights, quantitative takeaways and creative inspiration to make your next weekly or monthly report stand out.</p>
+               </div>
+               <img src="assets/i/features/feat-alerts.png" alt="feature_window" />
+            </div>
+         </section>
+         
+         <section class="campaign-sec" id="campaign-section">
+            <div class="center-size10of12">
+               <h3>Campaign</h3>
+               <p class="intro ">With a unique and path-breaking methodology that relies on human-computer symbiosis, Unmetric leverages an optimal blend of advanced pattern mining algorithms with smart, pattern validating humans.  This allows for valuable insights on the multi-social-channel campaigns executed leading brands.</p>
+            </div>
+            <div class="feature_wrap">                  
+               <div class="feature_desc">            
+                  <h4>Campaign Intelligence</h4>  
+                  <p>Looking to answer how your campaign performed on Social Media? With Campaign Intelligence, you can identify competitor efforts across Facebook and Twitter and compare how your campaign engaged versus theirs.</p> 
+               </div>
+               <img src="assets/i/features/feat-camp_intel.png" alt="feature_window" />
+            </div>
+            <div class="feature_wrap">   
+               <div class="feature_desc">
+                  <h4>Hashtag Analysis</h4> 
+                  <p>Track the different brand conversations around real-time trends and topics to stay on point with your Instagram and Twitter community.</p>
+               </div>
+               <img src="assets/i/features/feat-hash_comp.png" alt="feature_window" />
+            </div>
+         </section>
+      </div>
+   </section>
+
+   <div class="cta-wrap">
+            <h4 class="">We’ve processed 100,000,000+ pieces of microcontent over 6 biggest social networks for 18,000+ brands from 30+ sectors, just for you.</h4>      
+            <a class="btn-pri" href="#">Sign up for a free trial</a>
+         </div>
+   
+   <section class="section all_features-wrap is_hidden">
+      <div class="content w-pad">
+         <h2 class="t-center push_btm-8">All Features</h2> 
+   
+         <div class="size5of12">
+            <h3 class="push_btm-4">Channel</h3> 
+            <h4><a href="features/content/brand-engagement.html">Brand Engagement</a></h4> 
+            <!-- <p>Discover how consumers engage with your content activity. View trends on a microcontent level or over larger time periods to gauge your brand's engagement on social vs competitor efforts.</p>  -->
+            
+            <h4><a href="#">Fan and Follower Growth</a></h4> 
+            <!-- <p>Track the growth of your social media audience. Unlock connections between new content or campaign efforts and Fans/Followers Growth Rates.</p>  -->
+   
+            <h4><a href="#">Competitor Benchmarks</a></h4> 
+            <!-- <p>Have a set of competitors in mind? Want to outperform the whole industry? Want to avoid surprises from the left field? Get the metrics and benchmarks to plan your social roadmap.</p>  -->
+   
+            <h4><a href="#">Audience and Influencers</a></h4> 
+            <!-- <p>Understand your social audience and compare them with your competitors. Track their influencers to uncover new ways to expand your reach and forge partnerships.</p> -->
+   
+            <h4><a href="#">Customer Service</a></h4> 
+            <!-- <p>Wonder how often your Twitter team should reply to customer tweets? Get the secrets to excellent customer service on social media with our dedicated Customer Service metrics.</p> -->
+   
+            <h4><a href="#">Data and Reports</a></h4> 
+            <!-- <p>Need more control over your social media data? Pick a download format of choice and our data is yours to crunch.</p> -->
+         </div>
+   
+         <div class="size4of12">
+            <h3 class="push_btm-4">Content</h3>
+   
+            <h4><a href="features/content/brand-engagement.html">Content Strategy</a></h4> 
+            <!-- <p>See what kind of creative content resonates on Facebook, Twitter and Instagram. Use the data based on our unique science to direct efforts for your next Post, Tweet or even campaign.</p>  -->
+   
+            <h4><a href="#">Sentiment</a></h4>
+            <!-- <p>Tune in to consumer conversations on Posts and Tweets. View a breakdown of positive, negative and neutral vibes to understand how your social audience feel.</p> -->
+   
+            <h4><a href="#">Top Keywords</a></h4> 
+            <!-- <p>Discover topics and tags that drive your consumer conversations on Social Media. Use these insights to drive your customer response and creative.</p>  -->
+   
+            <h4><a href="#">Alerts</a></h4>
+            <!-- <p>Get to know when your competitors innovate right in your e-mail inbox. Use our alerts for daily or weekly insights, quantitative takeaways and creative inspiration to make your next weekly and monthly report stand out.</p>  -->
+         </div>
+         
+         <div class="size3of12">
+            <h3 class="push_btm-4">Campaign</h3>
+   
+            <h4><a href="#">Campaign Intelligence</a></h4> 
+            <!-- <p>Looking to answer how your campaign performed on Social Media? With Campaign Intelligence, you can identify competitor efforts across Facebook and Twitter and stack how your campaign engaged versus theirs.</p>  -->
+   
+            <h4><a href="#">Hashtag Analysis</a></h4>  
+            <!-- <p>Track the different brand conversations around happening trends and topics to stay on point with your Instagram and Twitter community.</p> -->
+         </div>
+      </div>
+   </section>
+      
+  
+      
+   <footer class="section footer">
+      <div class="content">
+         <div class="center-size8of12">
+            <div class="footer_links">
+               <a href="/">Home</a> &bull;
+               <a class='current' href="product.html">Product</a> &bull;
+               <a class='current' href="product.html">Company</a> &bull;
+               <a class='current' href="product.html">Contact</a> &bull;
+               <a class='current' href="product.html">Blog</a> &bull;
+               <a class='current' href="product.html">Sign Up</a>
+               <!--
+<a class='current' href="product.html">See how Unmetric can help you</a><br/>
+               <a href="company.html">Meet the team at Unmetric</a><br/>
+               <a href="contact.html">Get in touch with us</a><br/>
+               <a href="blog.html">Latest News</a>
+-->
+               <!--
+<a href="product.html#3cs">Learn about the advantages of Content, Campaign & Channel Intelligence.</a><br/>
+               <a href="company.html#exec">Meet the team at Unmetric.</a>
+-->
+            </div>
+         </div>
+         <div class="center-size5of12">
+            <div class="social_wrap">
+<!--                <p>You can find Unmetric across many of the social networks we cover on our platform:</p> -->
+               <ul class="social_list">
+                  <li><a class="social_link-fb" href="#">Facebook</a></li>
+                  <li><a class="social_link-tw" href="#">Twitter</a></li>
+                  <li><a class="social_link-pt" href="#">Pinterest</a></li>
+                  <li><a class="social_link-in" href="#">LinkedIn</a></li>
+                  <li><a class="social_link-ss" href="#">SlideShare</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+   
+   <div class="tw_cert-pg">
+      <a href="#">
+         <img src="../assets/i/twitter_certified_product_badge.png" alt="twitter-certified-product-badge"/>
+         <p>Unmetric is now a Twitter Certified Product.</p>
+      </a>
+      <p class="tw_cert-desc">The Twitter Certified Program badge and the Twitter Bird are trademarks of Twitter, Inc. or its affiliates.</p>
+   </div>
+   
+   <div class="overlay menu_overlay">
+   <ul class="menu_list">   
+      <li class='current'>
+         <a class='current' href="product.html"><span>See what you can achieve with Unmetric</span> Product</a>
+      </li>
+      <li><a href="company.html"><span>Meet the team at Unmetric</span> Company</a></li>
+      <li><a href="contact.html"><span>Get in touch with us</span> Contact</a></li>
+      <li><a href="http://blog.unmetric.com"><span>Tips, Insights, News</span> Blog</a></li>
+   </ul>
+   
+   <div class="social_wrap">
+      <span>We are social too</span>
+      <ul class="social_list">
+         <li><a class="social_link-fb" href="#">Facebook</a></li>
+         <li><a class="social_link-tw" href="#">Twitter</a></li>
+         <li><a class="social_link-pt" href="#">Pinterest</a></li>
+         <li><a class="social_link-in" href="#">LinkedIn</a></li>
+         <li><a class="social_link-ss" href="#">SlideShare</a></li>
+      </ul>
+   </div>
+   
+</div>
+   
+   <!-- All JS goes here-->
+   
+   <script src='assets/js/vendor/jquery-1.9.1.min.js'></script>
+<script src='assets/js/vendor/jquery.smooth-scroll.min.js'></script>
+<script src='assets/js/vendor/bjqs-1.3.min.js'></script>
+<script src='assets/js/checksession.js'></script>
+<script src='assets/js/main.js'></script>
+<script src='assets/js/vendor/jquery.sticky.js'></script>
+   
+   <script>
+      $(window).load(function(){
+         $("#c-nav").sticky({ topSpacing: 15 });
+      });
+      
+		$(document).ready(function() {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				var id = $(this).attr('href');
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 600);
+			});
+		});
+   </script>
+   
+</body>
+</html>
